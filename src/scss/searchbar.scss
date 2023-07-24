@@ -1,0 +1,19 @@
+.searchbar {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid grey;
+  margin: 16px 20px;
+  border-radius: 12px;
+  align-items: center;
+  input {
+    padding-left: 8px;
+    width: 80%;
+    height: 24px;
+    flex-grow: 1;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
