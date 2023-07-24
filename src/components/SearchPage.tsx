@@ -46,7 +46,7 @@ const SearchPage = () => {
           <CircularProgress /> Fetching GIF
         </div>
       )}
-      {!arrayIsNullOrEmpty(giphy?.data) || !isLoading ? (
+      {!arrayIsNullOrEmpty(giphy?.data) || isLoading ? (
         <SearchResults
           giphy={giphy}
           setShowSnackbar={setShowSnackbar}
