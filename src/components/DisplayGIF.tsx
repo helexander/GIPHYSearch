@@ -1,4 +1,5 @@
 import '../scss/results.scss';
+import { stringIsNullOrEmpty } from '../utils/strings';
 
 const DisplayGIF = ({ giphy, setShowSnackbar }) => {
   const copyGIFUrl = ({ url }) => {
@@ -19,7 +20,7 @@ const DisplayGIF = ({ giphy, setShowSnackbar }) => {
             <div className="gif__card__overview">
               <h3>
                 <a href={gif.url} target="_blank">
-                  {gif.title}
+                  {stringIsNullOrEmpty(gif.title) ? gif.username : gif.title}
                 </a>
               </h3>
               <div>
